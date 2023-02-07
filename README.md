@@ -1,6 +1,6 @@
 # MicroFog : A Framework for Scalable Placement of Microservices-based IoT Applications in Federated Fog Environments
 
-###MicroFog is a scalable and extensible framework that enables Microservices-based IoT Applications placement within multi-fog multi-cloud environments using Kubernetes (as container orchestrator) and Istio (as Service Mesh)
+### MicroFog is a scalable and extensible framework that enables Microservices-based IoT Applications placement within multi-fog multi-cloud environments using Kubernetes (as container orchestrator) and Istio (as Service Mesh)
 
 ## Features : 
 * Multi-fog Multi-cloud microservice placement and deployment

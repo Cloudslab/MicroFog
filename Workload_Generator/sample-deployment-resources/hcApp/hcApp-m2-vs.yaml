@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: hcm2
+spec:
+  hosts:
+  - "hcm2.hcapp.svc.cluster.local"
+  http:
+  - match:
+    - uri:
+        prefix: /DummyM/home
+    - uri:
+        prefix: /DummyM/getResults
+    route:
+    - destination:
+        port:
+          number: 8080
+        host: hcm2

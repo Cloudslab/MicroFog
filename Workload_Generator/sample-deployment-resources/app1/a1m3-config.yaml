@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: a1m3-config
+  namespace: app1
+data:
+  application.properties: |-
+
+    microservice.nextservices=1
+
+    microservice.sync[0].services=0
+
+    microservice.nextservice[0].type=get
+    microservice.nextservice[0].url=http://a1m4.app1.svc.cluster.local:8080
+    microservice.nextservice[0].reqmsgsize=6
+    microservice.nextservice[0].reqprocesstime=6
+    microservice.nextservice[0].repmsgsize=5
+    microservice.nextservice[0].repprocesstime=2
+
+
+

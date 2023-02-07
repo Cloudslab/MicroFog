@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: a2m3
+  labels:
+    app: a2m3
+    service: a2m3
+spec:
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8080
+  selector:
+    app: a2m3

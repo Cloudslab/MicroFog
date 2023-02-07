@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: a3m4
+  labels:
+    app: a3m4
+spec:
+  containers:
+  - name: a3m4
+    image: samodha/dummy-microservice:a3m4
+    resources:
+      requests:
+        cpu: "100m"
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 8080

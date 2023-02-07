@@ -1,0 +1,104 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: control-engine-vs
+spec:
+  hosts:
+  - "control-engine.control-engine.svc.cluster.local"
+  gateways:
+  - control-engine-gw
+  - mesh
+  http:
+  - match:
+    - uri:
+        prefix: "/MicroFog/home"
+      headers:
+        cluster:
+          exact: fog1
+
+    - uri:
+        prefix: "/MicroFog/addPR"
+      headers:
+        cluster:
+          exact: fog1
+
+    - uri:
+        prefix: "/MicroFog/executeCommands"
+      headers:
+        cluster:
+          exact: fog1
+
+    - uri:
+        prefix: "/MicroFog/getDeviceData"
+      headers:
+        cluster:
+          exact: fog1
+
+    route:
+    - destination:
+        port:
+          number: 8080
+        host: control-engine
+        subset: fog1
+  - match:
+    - uri:
+        prefix: "/MicroFog/home"
+      headers:
+        cluster:
+          exact: fog2
+
+    - uri:
+        prefix: "/MicroFog/addPR"
+      headers:
+        cluster:
+          exact: fog2
+
+    - uri:
+        prefix: "/MicroFog/executeCommands"
+      headers:
+        cluster:
+          exact: fog2
+
+    - uri:
+        prefix: "/MicroFog/getDeviceData"
+      headers:
+        cluster:
+          exact: fog2
+
+    route:
+    - destination:
+        port:
+          number: 8080
+        host: control-engine
+        subset: fog2
+  - match:
+    - uri:
+        prefix: "/MicroFog/home"
+      headers:
+        cluster:
+          exact: cloud1
+
+    - uri:
+        prefix: "/MicroFog/addPR"
+      headers:
+        cluster:
+          exact: cloud1
+
+    - uri:
+        prefix: "/MicroFog/executeCommands"
+      headers:
+        cluster:
+          exact: cloud1
+
+    - uri:
+        prefix: "/MicroFog/getDeviceData"
+      headers:
+        cluster:
+          exact: cloud1
+
+    route:
+    - destination:
+        port:
+          number: 8080
+        host: control-engine
+        subset: cloud1

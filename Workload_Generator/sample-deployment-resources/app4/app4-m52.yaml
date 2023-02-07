@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: a4m51
+  labels:
+    app: a4m52
+spec:
+  containers:
+  - name: a4m52
+    image: samodha/dummy-microservice:a4m52
+    resources:
+      requests:
+        cpu: "100m"
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 8080

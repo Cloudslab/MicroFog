@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: a4m51
+  labels:
+    app: a4m51
+    service: a4m51
+spec:
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8080
+  selector:
+    app: a4m51

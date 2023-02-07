@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-11-17T12:25:57Z"
+  name: controller-config
+  namespace: control-engine
+data:
+  application.properties: |-
+    controlengine.initDelay = 1
+
+    controlengine.operationmode.distributed =true 
+    controlengine.operationmode.primary = true 
+
+    cluster.name = fog1
+    cluster.tier = fog
+
+
+    # PERIODIC or EVENT_DRIVEN
+    controlengine.placementmode.periodic = false
+    controlengine.period = 1
+
+    controlengine.populatemetadata = false
+
+    controlengine.placementalgotype.internal= true    
+    controlengine.placementalgo = DISTRIBUTED_PLACEMENT
+    controlengine.placementalgourl = http://algo-1.control-engine.svc.cluster.local:8080    
+    controlengine.placementalgo.version  = V2
+    
+
+    quarkus.log.level=INFO
+
+    #minio configs
+    minio.minioEndPoint = http://minio.control-engine.svc.cluster.local:9000
+    minio.accesskey = minioadmin
+    minio.secretkey = minioadmin
+    minio.bucketname = microfog-app-metadata
+
+    redis.url = redis://redis.control-engine.svc.cluster.local:6379
+
+    controlengine.loadblancing.enabled = true
+    controlengine.loadblancing.policy = weighted_round_robin
+
+    #distributed controller communication
+    cloud.adjacent.cluster[0] = cloud1
+    fog.adjacent.cluster[0] = fog2
+  
+
+    controlengine.forwardpolicy = to_fog_cloud
+    controlengine.forwardUrl = http://control-engine.control-engine.svc.cluster.local:8080

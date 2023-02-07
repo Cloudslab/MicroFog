@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: a2m1-config
+  namespace: app2
+data:
+  application.properties: |-
+
+    microservice.nextservices=1
+
+    microservice.sync[0].services=0
+
+    microservice.nextservice[0].type=get
+    microservice.nextservice[0].url=http://a2m2.app2.svc.cluster.local:8080
+    microservice.nextservice[0].reqmsgsize=8
+    microservice.nextservice[0].reqprocesstime=4
+    microservice.nextservice[0].repmsgsize=3
+    microservice.nextservice[0].repprocesstime=2
+
+

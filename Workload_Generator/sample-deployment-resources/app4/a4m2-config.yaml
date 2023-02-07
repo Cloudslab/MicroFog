@@ -1,0 +1,68 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-11-29T07:22:31Z"
+  name: a4m2-config
+  namespace: app4
+  resourceVersion: "827925"
+  uid: a5f7ec8e-898c-4f86-a277-c3dbae86b254
+data:
+  application.properties: |-
+
+    microservice.nextservices=6
+
+    #candidate and aggregate
+    microservice.candidates[0].services=2,3,4
+
+    microservice.aggregators[0].services=0,1
+    microservice.aggregators[0].candidateids=0
+
+    microservice.sync[0].aggregatorid=0
+    microservice.sync[0].candidateids=0
+    microservice.sync[1].services=5
+
+    microservice.candidateselection=random
+
+
+    microservice.nextservice[0].type=get
+    microservice.nextservice[0].url=http://a4m3.app4.svc.cluster.local:8080
+    microservice.nextservice[0].reqmsgsize=8
+    microservice.nextservice[0].reqprocesstime=25
+    microservice.nextservice[0].repmsgsize=5
+    microservice.nextservice[0].repprocesstime=5
+
+    microservice.nextservice[1].type=get
+    microservice.nextservice[1].url=http://a4m4.app4.svc.cluster.local:8080
+    microservice.nextservice[1].reqmsgsize=8
+    microservice.nextservice[1].reqprocesstime=10
+    microservice.nextservice[1].repmsgsize=5
+    microservice.nextservice[1].repprocesstime=5
+
+    microservice.nextservice[2].type=get
+    microservice.nextservice[2].url=http://a4m51.app4.svc.cluster.local:8080
+    microservice.nextservice[2].reqmsgsize=8
+    microservice.nextservice[2].reqprocesstime=10
+    microservice.nextservice[2].repmsgsize=5
+    microservice.nextservice[2].repprocesstime=5
+
+    microservice.nextservice[3].type=get
+    microservice.nextservice[3].url=http://a4m52.app4.svc.cluster.local:8080
+    microservice.nextservice[3].reqmsgsize=8
+    microservice.nextservice[3].reqprocesstime=10
+    microservice.nextservice[3].repmsgsize=5
+    microservice.nextservice[3].repprocesstime=5
+
+    microservice.nextservice[4].type=get
+    microservice.nextservice[4].url=http://a4m53.app4.svc.cluster.local:8080
+    microservice.nextservice[4].reqmsgsize=8
+    microservice.nextservice[4].reqprocesstime=10
+    microservice.nextservice[4].repmsgsize=5
+    microservice.nextservice[4].repprocesstime=5
+
+    microservice.nextservice[5].type=get
+    microservice.nextservice[5].url=http://a4m6.app4.svc.cluster.local:8080
+    microservice.nextservice[5].reqmsgsize=8
+    microservice.nextservice[5].reqprocesstime=10
+    microservice.nextservice[5].repmsgsize=5
+    microservice.nextservice[5].repprocesstime=5
+

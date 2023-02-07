@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: a1m1
+  labels:
+    app: a1m1
+    service: a1m1
+spec:
+  ports:
+  - name: http
+    port: 8080
+    targetPort: 8080
+  selector:
+    app: a1m1

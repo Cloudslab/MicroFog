@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-11-29T07:22:31Z"
+  name: a4m1-config
+  namespace: app4
+  resourceVersion: "827925"
+  uid: a5f7ec8e-898c-4f86-a277-c3dbae86b254
+data:
+  application.properties: |-
+
+    microservice.nextservices=1
+
+    microservice.sync[0].services=0
+
+    microservice.nextservice[0].type=get
+    microservice.nextservice[0].url=http://a4m2.app4.svc.cluster.local:8080
+    microservice.nextservice[0].reqmsgsize=8
+    microservice.nextservice[0].reqprocesstime=25
+    microservice.nextservice[0].repmsgsize=5
+    microservice.nextservice[0].repprocesstime=5
+
+

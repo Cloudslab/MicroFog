@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: minio-cloud1
+  labels:
+    app: minio-cloud1
+    service: minio-cloud1
+spec:
+  ports:
+  - name: http
+    port: 9090
+    targetPort: 9090
+  - name: api
+    port: 9000
+    targetPort: 9000
+  selector:
+    clustername: cloud1

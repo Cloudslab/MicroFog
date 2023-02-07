@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: a2m3-config
+  namespace: app2
+data:
+  application.properties: |-
+
+    microservice.nextservices=0
+
+    microservice.directreply.msgsize=6
+    microservice.directreply.processingtime=5
+
+
+

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hcm1
+  labels:
+    app: hcm1
+spec:
+  containers:
+  - name: hcm1
+    image: samodha/dummy-microservice-test:hcm1
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 8080

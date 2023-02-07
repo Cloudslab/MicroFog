@@ -1,0 +1,14 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: redisdata
+spec:
+  hosts:
+  - redis.control-engine.svc.cluster.local
+  http:
+  - match:
+    route:
+    - destination:
+        port:
+          number: 6379
+        host: redis.control-engine.svc.cluster.local

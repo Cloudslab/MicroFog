@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: a2m4
+  labels:
+    app: a2m4
+spec:
+  containers:
+  - name: a2m4
+    image: samodha/dummy-microservice-test:a2m4
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 8080

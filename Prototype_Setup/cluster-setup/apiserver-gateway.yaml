@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: apiserver-gateway
+spec:
+  selector:
+    istio: eastwestgateway # use Istio default gateway implementation
+  servers:
+  - port:
+      number: 6443
+      name: api-port
+      protocol: tls
+    tls:
+      mode: PASSTHROUGH
+    hosts:
+    - "*"

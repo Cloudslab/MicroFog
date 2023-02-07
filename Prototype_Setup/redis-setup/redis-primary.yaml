@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis
+  labels:
+    app: redis
+    level: redis-primary
+spec:
+  containers:
+  - name: redis
+    image: redis
+    command:
+      - redis-server
+    args:
+      - "--protected-mode"
+      - "no"
+    ports:
+      - containerPort: 6379

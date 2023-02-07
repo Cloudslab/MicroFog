@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-11-29T07:22:31Z"
+  name: a4m4-config
+  namespace: app4
+  resourceVersion: "827925"
+  uid: a5f7ec8e-898c-4f86-a277-c3dbae86b254
+data:
+  application.properties: |-
+
+    microservice.nextservices=0
+
+    microservice.directreply.msgsize=5
+    microservice.directreply.processingtime=5
+
+

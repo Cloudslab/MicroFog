@@ -1,0 +1,7 @@
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: app1-m1-dr
+spec:
+  host: "a1m1.app1.svc.cluster.local"
+

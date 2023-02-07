@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-replica
+  labels:
+    app: redis
+    level: redis-replica
+spec:
+  containers:
+  - name: redis-replica
+    image: redis
+    command:
+      - redis-server
+    args:
+      - "--slaveof"
+      - "redis-primary.control-engine.svc.cluster.local"
+      - "6379"
+      - "--protected-mode"
+      - "no"
+    ports:
+      - containerPort: 6379
+        name: redis
+        protocol: TCP

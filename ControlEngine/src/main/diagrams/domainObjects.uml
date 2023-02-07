@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.microfog.controlengine.model.domainObjects</OriginalElement>
+  <nodes>
+    <node x="731.4324324324327" y="0.0">com.microfog.controlengine.model.domainObjects.Microservice</node>
+    <node x="869.2911036036037" y="172.0">com.microfog.controlengine.model.domainObjects.ApplicationDAG</node>
+    <node x="219.0" y="565.0">com.microfog.controlengine.model.domainObjects.ClusterData</node>
+    <node x="305.2911036036037" y="172.0">com.microfog.controlengine.model.domainObjects.Restrictions</node>
+    <node x="249.0" y="414.0">com.microfog.controlengine.model.domainObjects.PrQueue</node>
+    <node x="691.7911036036037" y="80.0">com.microfog.controlengine.model.domainObjects.Dataflow</node>
+    <node x="470.2911036036037" y="172.0">com.microfog.controlengine.model.domainObjects.QoSParameter</node>
+    <node x="273.7911036036037" y="294.0">com.microfog.controlengine.model.domainObjects.PlacementRequest</node>
+    <node x="407.0" y="487.0">com.microfog.controlengine.model.domainObjects.LBData</node>
+    <node x="224.0" y="487.0">com.microfog.controlengine.model.domainObjects.FogDevice</node>
+    <node x="716.6661036036037" y="294.0">com.microfog.controlengine.model.domainObjects.Application</node>
+    <node x="20.5" y="487.0">com.microfog.controlengine.model.domainObjects.Placement</node>
+    <node x="0.0" y="414.0">com.microfog.controlengine.model.domainObjects.ForwardRequestQueue</node>
+    <node x="559.0" y="487.0">com.microfog.controlengine.model.domainObjects.Cluster</node>
+    <node x="655.2911036036037" y="172.0">com.microfog.controlengine.model.domainObjects.CompositeService</node>
+    <node x="81.29110360360369" y="172.0">com.microfog.controlengine.model.domainObjects.PlacedMicroservice</node>
+    <node x="0.0" y="565.0">com.microfog.controlengine.model.domainObjects.DeploymentInfo</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.microfog.controlengine.model.domainObjects.CompositeService" target="com.microfog.controlengine.model.domainObjects.Microservice" relationship="DEPENDENCY">
+      <point x="48.25" y="-14.0" />
+      <point x="800.0411036036037" y="150.0" />
+      <point x="822.2911036036037" y="150.0" />
+      <point x="822.2911036036037" y="59.0" />
+      <point x="877.4324324324327" y="59.0" />
+      <point x="877.4324324324327" y="49.0" />
+      <point x="844.6824324324327" y="49.0" />
+      <point x="37.75" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.PrQueue" target="com.microfog.controlengine.model.domainObjects.PlacementRequest" relationship="TO_MANY">
+      <point x="29.5" y="-14.0" />
+      <point x="337.5" y="383.0" />
+      <point x="588.0411036036037" y="383.0" />
+      <point x="588.0411036036037" y="343.0" />
+      <point x="421.5411036036037" y="343.0" />
+      <point x="49.25" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.Application" target="com.microfog.controlengine.model.domainObjects.ApplicationDAG" relationship="TO_ONE">
+      <point x="-46.33333333333337" y="-14.0" />
+      <point x="739.8327702702704" y="272.0" />
+      <point x="644.7911036036037" y="272.0" />
+      <point x="644.7911036036037" y="222.0" />
+      <point x="912.7911036036037" y="222.0" />
+      <point x="-43.5" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.PlacementRequest" target="com.microfog.controlengine.model.domainObjects.PlacedMicroservice" relationship="CREATE">
+      <point x="-65.66666666666674" y="-14.0" />
+      <point x="306.62443693693695" y="272.0" />
+      <point x="183.2911036036037" y="272.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.CompositeService" target="com.microfog.controlengine.model.domainObjects.Dataflow" relationship="DEPENDENCY">
+      <point x="48.25" y="-14.0" />
+      <point x="800.0411036036037" y="150.0" />
+      <point x="822.2911036036037" y="150.0" />
+      <point x="822.2911036036037" y="140.0" />
+      <point x="858.7911036036037" y="140.0" />
+      <point x="858.7911036036037" y="130.0" />
+      <point x="781.7911036036037" y="130.0" />
+      <point x="30.0" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.Application" target="com.microfog.controlengine.model.domainObjects.QoSParameter" relationship="TO_MANY">
+      <point x="-46.33333333333337" y="-14.0" />
+      <point x="739.8327702702704" y="272.0" />
+      <point x="644.7911036036037" y="272.0" />
+      <point x="644.7911036036037" y="242.0" />
+      <point x="405.2911036036037" y="242.0" />
+      <point x="405.2911036036037" y="232.0" />
+      <point x="511.2911036036037" y="232.0" />
+      <point x="-41.0" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.CompositeService" target="com.microfog.controlengine.model.domainObjects.Microservice" relationship="TO_MANY">
+      <point x="-48.25" y="-14.0" />
+      <point x="703.5411036036037" y="140.0" />
+      <point x="681.2911036036037" y="140.0" />
+      <point x="681.2911036036037" y="59.0" />
+      <point x="651.112612612613" y="59.0" />
+      <point x="651.112612612613" y="49.0" />
+      <point x="769.1824324324327" y="49.0" />
+      <point x="-37.75" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.Application" target="com.microfog.controlengine.model.domainObjects.QoSParameter" relationship="DEPENDENCY">
+      <point x="0.0" y="-14.0" />
+      <point x="786.1661036036037" y="232.0" />
+      <point x="593.2911036036037" y="232.0" />
+      <point x="41.0" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.Dataflow" target="com.microfog.controlengine.model.domainObjects.Microservice" relationship="DEPENDENCY">
+      <point x="30.0" y="-14.0" />
+      <point x="781.7911036036037" y="59.0" />
+      <point x="877.4324324324327" y="59.0" />
+      <point x="877.4324324324327" y="49.0" />
+      <point x="844.6824324324327" y="49.0" />
+      <point x="37.75" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.Application" target="com.microfog.controlengine.model.domainObjects.CompositeService" relationship="TO_MANY">
+      <point x="-46.33333333333337" y="-14.0" />
+      <point x="739.8327702702704" y="272.0" />
+      <point x="644.7911036036037" y="272.0" />
+      <point x="644.7911036036037" y="222.0" />
+      <point x="703.5411036036037" y="222.0" />
+      <point x="-48.25" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.DeploymentInfo" target="com.microfog.controlengine.model.domainObjects.Placement" relationship="TO_MANY">
+      <point x="-43.5" y="-14.0" />
+      <point x="43.5" y="540.0" />
+      <point x="53.75" y="540.0" />
+      <point x="-33.25" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.Application" target="com.microfog.controlengine.model.domainObjects.CompositeService" relationship="DEPENDENCY">
+      <point x="0.0" y="-14.0" />
+      <point x="786.1661036036037" y="272.0" />
+      <point x="800.0411036036037" y="272.0" />
+      <point x="48.25" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.PlacementRequest" target="com.microfog.controlengine.model.domainObjects.QoSParameter" relationship="TO_MANY">
+      <point x="0.0" y="-14.0" />
+      <point x="372.2911036036037" y="272.0" />
+      <point x="360.5568693693698" y="272.0" />
+      <point x="360.5568693693698" y="262.0" />
+      <point x="405.2911036036037" y="262.0" />
+      <point x="405.2911036036037" y="232.0" />
+      <point x="511.2911036036037" y="232.0" />
+      <point x="-41.0" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.Application" target="com.microfog.controlengine.model.domainObjects.Microservice" relationship="TO_MANY">
+      <point x="-46.33333333333337" y="-14.0" />
+      <point x="739.8327702702704" y="272.0" />
+      <point x="644.7911036036037" y="272.0" />
+      <point x="644.7911036036037" y="222.0" />
+      <point x="459.7911036036037" y="222.0" />
+      <point x="459.7911036036037" y="59.0" />
+      <point x="651.112612612613" y="59.0" />
+      <point x="651.112612612613" y="49.0" />
+      <point x="769.1824324324327" y="49.0" />
+      <point x="-37.75" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.ClusterData" target="com.microfog.controlengine.model.domainObjects.FogDevice" relationship="DEPENDENCY">
+      <point x="-35.75" y="-14.0" />
+      <point x="254.75" y="540.0" />
+      <point x="257.25" y="540.0" />
+      <point x="-33.25" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.ForwardRequestQueue" target="com.microfog.controlengine.model.domainObjects.PlacementRequest" relationship="DEPENDENCY">
+      <point x="-57.25" y="-14.0" />
+      <point x="57.25" y="393.0" />
+      <point x="17.51576576576599" y="393.0" />
+      <point x="17.51576576576599" y="363.0" />
+      <point x="323.0411036036037" y="363.0" />
+      <point x="-49.25" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.PlacementRequest" target="com.microfog.controlengine.model.domainObjects.Restrictions" relationship="DEPENDENCY">
+      <point x="65.66666666666663" y="-14.0" />
+      <point x="437.9577702702703" y="272.0" />
+      <point x="449.3074324324327" y="272.0" />
+      <point x="449.3074324324327" y="252.0" />
+      <point x="413.2911036036037" y="252.0" />
+      <point x="36.0" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.DeploymentInfo" target="com.microfog.controlengine.model.domainObjects.Placement" relationship="DEPENDENCY">
+      <point x="43.5" y="-14.0" />
+      <point x="130.5" y="540.0" />
+      <point x="120.25" y="540.0" />
+      <point x="33.25" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.Dataflow" target="com.microfog.controlengine.model.domainObjects.Microservice" relationship="TO_ONE">
+      <point x="-30.0" y="-14.0" />
+      <point x="721.7911036036037" y="59.0" />
+      <point x="651.112612612613" y="59.0" />
+      <point x="651.112612612613" y="49.0" />
+      <point x="769.1824324324327" y="49.0" />
+      <point x="-37.75" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.Application" target="com.microfog.controlengine.model.domainObjects.Dataflow" relationship="TO_MANY">
+      <point x="-46.33333333333337" y="-14.0" />
+      <point x="739.8327702702704" y="272.0" />
+      <point x="644.7911036036037" y="272.0" />
+      <point x="644.7911036036037" y="150.0" />
+      <point x="721.7911036036037" y="150.0" />
+      <point x="-30.0" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.PlacementRequest" target="com.microfog.controlengine.model.domainObjects.QoSParameter" relationship="DEPENDENCY">
+      <point x="65.66666666666663" y="-14.0" />
+      <point x="437.9577702702703" y="272.0" />
+      <point x="449.3074324324327" y="272.0" />
+      <point x="449.3074324324327" y="262.0" />
+      <point x="593.2911036036037" y="262.0" />
+      <point x="41.0" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.ForwardRequestQueue" target="com.microfog.controlengine.model.domainObjects.PlacementRequest" relationship="TO_MANY">
+      <point x="57.25" y="-14.0" />
+      <point x="171.75" y="383.0" />
+      <point x="588.0411036036037" y="383.0" />
+      <point x="588.0411036036037" y="343.0" />
+      <point x="421.5411036036037" y="343.0" />
+      <point x="49.25" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.PrQueue" target="com.microfog.controlengine.model.domainObjects.PlacedMicroservice" relationship="DEPENDENCY">
+      <point x="-29.5" y="-14.0" />
+      <point x="278.5" y="393.0" />
+      <point x="197.125" y="393.0" />
+      <point x="197.125" y="353.0" />
+      <point x="157.81925675675672" y="353.0" />
+      <point x="157.81925675675672" y="272.0" />
+      <point x="115.29110360360369" y="272.0" />
+      <point x="-68.0" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.PlacementRequest" target="com.microfog.controlengine.model.domainObjects.Restrictions" relationship="TO_MANY">
+      <point x="0.0" y="-14.0" />
+      <point x="372.2911036036037" y="272.0" />
+      <point x="360.5568693693698" y="272.0" />
+      <point x="360.5568693693698" y="252.0" />
+      <point x="341.2911036036037" y="252.0" />
+      <point x="-36.0" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.Application" target="com.microfog.controlengine.model.domainObjects.ApplicationDAG" relationship="CREATE">
+      <point x="46.33333333333337" y="-14.0" />
+      <point x="832.4994369369371" y="262.0" />
+      <point x="999.7911036036037" y="262.0" />
+      <point x="43.5" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.PlacementRequest" target="com.microfog.controlengine.model.domainObjects.PlacedMicroservice" relationship="TO_MANY">
+      <point x="0.0" y="-14.0" />
+      <point x="372.2911036036037" y="272.0" />
+      <point x="360.5568693693698" y="272.0" />
+      <point x="360.5568693693698" y="252.0" />
+      <point x="251.2911036036037" y="252.0" />
+      <point x="68.0" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.Application" target="com.microfog.controlengine.model.domainObjects.Microservice" relationship="DEPENDENCY">
+      <point x="0.0" y="-14.0" />
+      <point x="786.1661036036037" y="272.0" />
+      <point x="1053.7911036036037" y="272.0" />
+      <point x="1053.7911036036037" y="59.0" />
+      <point x="877.4324324324327" y="59.0" />
+      <point x="877.4324324324327" y="49.0" />
+      <point x="844.6824324324327" y="49.0" />
+      <point x="37.75" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.PrQueue" target="com.microfog.controlengine.model.domainObjects.Application" relationship="DEPENDENCY">
+      <point x="-29.5" y="-14.0" />
+      <point x="278.5" y="393.0" />
+      <point x="197.125" y="393.0" />
+      <point x="197.125" y="353.0" />
+      <point x="786.1661036036037" y="353.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.PrQueue" target="com.microfog.controlengine.model.domainObjects.PlacementRequest" relationship="DEPENDENCY">
+      <point x="-29.5" y="-14.0" />
+      <point x="278.5" y="393.0" />
+      <point x="197.125" y="393.0" />
+      <point x="197.125" y="373.0" />
+      <point x="17.51576576576599" y="373.0" />
+      <point x="17.51576576576599" y="363.0" />
+      <point x="323.0411036036037" y="363.0" />
+      <point x="-49.25" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.ClusterData" target="com.microfog.controlengine.model.domainObjects.FogDevice" relationship="TO_MANY">
+      <point x="35.75" y="-14.0" />
+      <point x="326.25" y="540.0" />
+      <point x="323.75" y="540.0" />
+      <point x="33.25" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.ApplicationDAG" target="com.microfog.controlengine.model.domainObjects.Microservice" relationship="DEPENDENCY">
+      <point x="0.0" y="-14.0" />
+      <point x="956.2911036036037" y="59.0" />
+      <point x="877.4324324324327" y="59.0" />
+      <point x="877.4324324324327" y="49.0" />
+      <point x="844.6824324324327" y="49.0" />
+      <point x="37.75" y="14.0" />
+    </edge>
+    <edge source="com.microfog.controlengine.model.domainObjects.Application" target="com.microfog.controlengine.model.domainObjects.Dataflow" relationship="DEPENDENCY">
+      <point x="0.0" y="-14.0" />
+      <point x="786.1661036036037" y="272.0" />
+      <point x="858.7911036036037" y="272.0" />
+      <point x="858.7911036036037" y="130.0" />
+      <point x="781.7911036036037" y="130.0" />
+      <point x="30.0" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="527.0" y="296.5" />
+  <SelectedNodes>
+    <node>com.microfog.controlengine.model.domainObjects.Application</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>packageLocal</VISIBILITY>
+</Diagram>
+

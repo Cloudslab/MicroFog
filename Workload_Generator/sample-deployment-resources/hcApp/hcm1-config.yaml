@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hcm1-config
+  namespace: hcapp
+data:
+  application.properties: |-
+
+    microservice.nextservices=2
+
+    microservice.sync[0].services=0,1
+
+    microservice.nextservice[0].type=get
+    microservice.nextservice[0].url=http://hcm2.hcapp.svc.cluster.local:8080
+    microservice.nextservice[0].reqmsgsize=8
+    microservice.nextservice[0].reqprocesstime=5
+    microservice.nextservice[0].repmsgsize=3
+    microservice.nextservice[0].repprocesstime=2
+
+    microservice.nextservice[1].type=post
+    microservice.nextservice[1].url=http://hcm3.hcapp.svc.cluster.local:8080
+    microservice.nextservice[1].reqmsgsize=8
+    microservice.nextservice[1].reqprocesstime=25
+    microservice.nextservice[1].repmsgsize=3
+    microservice.nextservice[1].repprocesstime=1
+
+
+
+

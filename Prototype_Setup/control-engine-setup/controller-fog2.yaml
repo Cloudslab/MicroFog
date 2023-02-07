@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: controller-fog2
+  labels:
+    app: control-engine
+    cluster: fog2
+spec:
+  containers:
+  - name: controller-fog2
+    image: samodha/microfog:latest
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 8080
+  serviceAccountName: controller-serviceaccount 
+  

@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2022-11-29T07:22:31Z"
+  name: a3m1-config
+  namespace: app3
+  resourceVersion: "827925"
+  uid: a5f7ec8e-898c-4f86-a277-c3dbae86b254
+data:
+  application.properties: |-
+
+    microservice.nextservices=3
+
+    microservice.candidateselection=random
+
+    microservice.nextservice[0].url=http://a3m2.app3.svc.cluster.local:8080
+    microservice.nextservice[0].reqmsgsize=8
+    microservice.nextservice[0].reqprocesstime=25
+    microservice.nextservice[0].repmsgsize=5
+    microservice.nextservice[0].repprocesstime=5
+
+
+    microservice.nextservice[1].url=http://a3m3.app3.svc.cluster.local:8080
+    microservice.nextservice[1].reqmsgsize=8
+    microservice.nextservice[1].reqprocesstime=10
+    microservice.nextservice[1].repmsgsize=5
+    microservice.nextservice[1].repprocesstime=5
+
+    
+    microservice.nextservice[2].url=http://a3m4.app3.svc.cluster.local:8080
+    microservice.nextservice[2].reqmsgsize=8 
+    microservice.nextservice[2].reqprocesstime=15
+    microservice.nextservice[2].repmsgsize=5
+    microservice.nextservice[2].repprocesstime=5
+
+

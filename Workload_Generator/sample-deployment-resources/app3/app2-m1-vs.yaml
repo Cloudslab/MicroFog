@@ -1,0 +1,20 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: a3m1
+spec:
+  hosts:
+  - "a3m1.app3.svc.cluster.local"
+  gateways:
+  - app3-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /DummyM/home
+    - uri:
+        prefix: /DummyM/getResults
+    route:
+    - destination:
+        port:
+          number: 8080
+        host: a3m1

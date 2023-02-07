@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: controller-cloud1
+  labels:
+    app: control-engine
+    cluster: cloud1
+spec:
+  containers:
+  - name: redis
+    image: redis
+    command:
+      - redis-server
+    ports:
+      - containerPort: 6379
+        name: redis
+        protocol: TCP
+  - name: controller-cloud1
+    image: samodha/microfog:latest
+    resources:
+      requests:
+        cpu: "100m"
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 8080
+  serviceAccountName: controller-serviceaccount 
+  

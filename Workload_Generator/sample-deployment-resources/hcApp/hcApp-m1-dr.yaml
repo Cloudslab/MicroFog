@@ -1,0 +1,7 @@
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: hcapp-m1-dr
+spec:
+  host: "hcm1.hcapp.svc.cluster.local"
+

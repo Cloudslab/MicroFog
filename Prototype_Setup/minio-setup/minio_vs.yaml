@@ -1,0 +1,14 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: miniodata
+spec:
+  hosts:
+  - minio.control-engine.svc.cluster.local
+  http:
+  - match:
+    route:
+    - destination:
+        port:
+          number: 9000
+        host: minio.control-engine.svc.cluster.local

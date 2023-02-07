@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: apiserver-vs
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - apiserver-gateway
+  tls:
+  - match:
+    - port: 6443
+      sniHosts:
+      - "*"
+    route:
+    - destination:
+        host: kubernetes.default.svc.cluster.local
+        port:
+          number: 443

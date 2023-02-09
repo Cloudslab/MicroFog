@@ -6,33 +6,33 @@ nodes:
   - role: control-plane
     image: kindest/node:v1.24.0@sha256:0866296e693efe1fed79d5e6c7af8df71fc73ae45e3679af05342239cdc5bc8e
     extraMounts:
-    - hostPath: ./data_cp_f1
+    - hostPath: ./data_cp_c1
       containerPath: /tmp/data
     kubeadmConfigPatches:
-    - |
-      kind: InitConfiguration
-      nodeRegistration:
-        kubeletExtraArgs:
-          system-reserved: memory=58Gi,cpu=13
+      - |
+        kind: InitConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=17Gi,cpu=8
     labels:
-      topology.kubernetes.io/region: fog
-      topology.kubernetes.io/zone: fog1
+      topology.kubernetes.io/region: cloud
+      topology.kubernetes.io/zone: cloud1
   - role: worker
     image: kindest/node:v1.24.0@sha256:0866296e693efe1fed79d5e6c7af8df71fc73ae45e3679af05342239cdc5bc8e
     extraMounts:
-    - hostPath: ./data_w1_f1
+    - hostPath: ./data_w1_c1
       containerPath: /tmp/data
     kubeadmConfigPatches:
-    - |
-      kind: JoinConfiguration
-      nodeRegistration:
-        kubeletExtraArgs:
-          system-reserved: memory=55Gi,cpu=12
-    - |
-      kind: ClusterConfiguration
-      apiServer:
-        extraArgs:
-          enable-aggregator-routing: "true"
+      - |
+        kind: JoinConfiguration
+        nodeRegistration:
+          kubeletExtraArgs:
+            system-reserved: memory=17Gi,cpu=8
+      - |
+        kind: ClusterConfiguration
+        apiServer:
+          extraArgs:
+            enable-aggregator-routing: "true"
     extraPortMappings:
       - containerPort: 32012
         hostPort: 15443
@@ -46,46 +46,8 @@ nodes:
     labels:
       istioingress: enable
       istioeastwest: enable
-      topology.kubernetes.io/region: fog
-      topology.kubernetes.io/zone: fog1
-  - role: worker
-    image: kindest/node:v1.24.0@sha256:0866296e693efe1fed79d5e6c7af8df71fc73ae45e3679af05342239cdc5bc8e
-    extraMounts:
-    - hostPath: ./data_w2_f1
-      containerPath: /tmp/data
-    kubeadmConfigPatches:
-    - |
-      kind: JoinConfiguration
-      nodeRegistration:
-        kubeletExtraArgs:
-          system-reserved: memory=48Gi,cpu=11
-    - |
-      kind: ClusterConfiguration
-      apiServer:
-        extraArgs:
-          enable-aggregator-routing: "true"
-    labels:
-      topology.kubernetes.io/region: fog
-      topology.kubernetes.io/zone: fog1
-  - role: worker
-    image: kindest/node:v1.24.0@sha256:0866296e693efe1fed79d5e6c7af8df71fc73ae45e3679af05342239cdc5bc8e
-    extraMounts:
-    - hostPath: ./data_w3_f1
-      containerPath: /tmp/data
-    kubeadmConfigPatches:
-    - |
-      kind: JoinConfiguration
-      nodeRegistration:
-        kubeletExtraArgs:
-          system-reserved: memory=56Gi,cpu=13
-    - |
-      kind: ClusterConfiguration
-      apiServer:
-        extraArgs:
-          enable-aggregator-routing: "true"
-    labels:
-      topology.kubernetes.io/region: fog
-      topology.kubernetes.io/zone: fog1
+      topology.kubernetes.io/region: cloud
+      topology.kubernetes.io/zone: cloud1
     
 kubeadmConfigPatches:
 - |

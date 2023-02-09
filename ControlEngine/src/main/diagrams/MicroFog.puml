@@ -25,7 +25,7 @@ object Application{
     application id
 }
 
-object QoSParameters
+object QoSParameter
 object ResourceRequirements{
    cpu
    memory
@@ -69,11 +69,13 @@ object Gateway
 
 object KubeResource
 object IstioResource
+object PlacementRestrictions
 
 
 
 ApplicationProvider  --  "1..*" PlacementRequest : submits >
-PlacementRequest -- "0..*" QoSParameters : contains >
+PlacementRequest -- "0..*" QoSParameter : contains >
+PlacementRequest -- "0..*" PlacementRestrictions : contains >
 PlacementRequest "1" -- "1" Application : is for >
 PlacementRequest "1..*" --  ControlEngine : processes <
 (PlacementRequest, ControlEngine). PlacementPolicy : using
@@ -90,12 +92,12 @@ Datapath "1" *-- "1..*" Dataflow : consists of >
 Dataflow "1..*" -- "1" Application : has <
 
 
-Microservice "1"--"1" MicroserviceLevelCommand : deployed using >
+Microservice "1"--"1..*" MicroserviceLevelCommand : deployed using >
 Application "1" --"1..*" ApplicationLevelCommand : has related >
 CompositeService "1" -- "1..*" ServiceLevelCommand : achieve composition through >
 
 
-PlacementPolicy "1" -- "1" Placement : generates >
+PlacementPolicy  --  Placement : generates >
 ControlEngine "1" -- "1..*" DeployCommands : executes >
 
 

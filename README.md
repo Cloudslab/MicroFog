@@ -39,5 +39,8 @@
    1. [dummy-micro-java](dummy-micro-java) : A template microservice using JAVA. It's a configurable microservice which can be as the buidling block for heterogeneous applications with diverse interaction patterns among microservices.
    2. [sample-deployment-resources](https://github.com/Cloudslab/MicroFog/tree/main/Workload_Generator/sample-deployment-resources) : We provide 5 example applications to demonstrate how to use the workload generator
    3. [docs](https://github.com/Cloudslab/MicroFog/tree/main/Workload_Generator/docs) : Explains the design, architecture of the workload generator.
+   
+## References :
+ * Samodha Pallewatta, Vassilis Kostakos, and Rajkumar Buyya, [”MicroFog: AFramework for Scalable Placement of Microservices-based IoT Applications in Federated Fog Environments”](https://arxiv.org/abs/2302.06971)
 
 

@@ -15,14 +15,25 @@
 * Rapid prototyping support 
 * Flexible and scalable for distributed deployment across fog and cloud clusters.
 
+
+
+<figure class="image">
+  <img src="https://user-images.githubusercontent.com/47441406/219677403-e262baa0-3ffd-4b8e-8eaa-3b925116b306.gif" width="500" height="350"/>
+  <figcaption>Example Application Placement Using MicroFog Framework</figcaption>
+</figure>
+
 ## Main Components of the framework:
 1. MicrFog-CE : Control Engine of the framework, responsible for executing placement algorithms and deploying the microservices-based application using Kubernetes and Istio resources
 2. Data Stores : Contains data required for application placement. Consists of 3 main data sores
    1. MinIO YAML Store
    2. Redis Meta Data Store
    3. Docker Image Registry
-3. Monitoring components
-4. Logging component
+3. Monitoring components (Prometheus, Grafana, Kiali)
+4. Logging component (Grafana Loki)
+
+## Technologies used:
+<img src="https://user-images.githubusercontent.com/47441406/219674401-acecad3d-fc9a-4fd4-b05d-ca5908c7e4ba.png" alt="" width="50" height="50"> <img src="https://user-images.githubusercontent.com/47441406/219667349-c1e94b04-317b-4271-afae-54da318845aa.png" alt="" width="50" height="50"> <img src="https://user-images.githubusercontent.com/47441406/219667516-6dd970c7-6b4d-4c54-a548-835a80dc4aaf.png" alt="" width="50" height="50"> &ensp;  <img src="https://user-images.githubusercontent.com/47441406/219671894-57a4b7e5-b021-40d4-a836-4502e4d2da42.png" alt="" width="70" height="50"> &ensp;  <img src="https://user-images.githubusercontent.com/47441406/219674566-4e37b79e-8447-4b32-a52b-f11e76cacdda.png" alt="" width="50" height="50">  <img src="https://user-images.githubusercontent.com/47441406/219674696-e23dec91-e7d4-4e9b-9c66-b1392c0540e3.png" alt="" width="50" height="50"> &ensp;  <img src="https://user-images.githubusercontent.com/47441406/219675269-61c7e264-fcfe-4cf0-90ed-f9a0fbdbc579.png" alt="" width="50" height="50">  &ensp;  <img src="https://user-images.githubusercontent.com/47441406/219675343-57b2ef83-cb20-47a9-b6dc-b7fba0eb653a.png" alt="" width="50" height="50"> &ensp;  <img src="https://user-images.githubusercontent.com/47441406/219675405-ba828bfa-308a-4e72-8709-bb65345257eb.png" alt="" width="50" height="50"> &ensp;  <img src="https://user-images.githubusercontent.com/47441406/219675724-8bc0073d-67c3-4eb6-9c55-682a301cec4e.png" alt="" width="50" height="50">
+
 
 ## This repository contains three resources for running and configuring MicroFog Framework. 
 

@@ -10,13 +10,13 @@ kind: Pod
 metadata:
   labels:
     app: minio
-    clustername: edge1
-  name: minio-edge1
+    clustername: fog1
+  name: minio-fog1
   namespace: control-engine # Change this value to match the namespace metadata.name
 spec:
-  hostname: minio-edge1
+  hostname: minio-fog1
   containers:
-  - name: minio-edge1
+  - name: minio-fog1
     image: quay.io/minio/minio:latest
     command:
     - /bin/bash

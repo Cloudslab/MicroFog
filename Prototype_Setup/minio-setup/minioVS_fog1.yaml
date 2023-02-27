@@ -14,5 +14,5 @@ spec:
     - destination:
         port:
           number: 9090
-        host: minio-edge2
+        host: minio-fog1
 

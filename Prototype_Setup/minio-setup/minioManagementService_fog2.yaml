@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: minio-edge2
+  name: minio-fog2
   labels:
-    app: minio-edge2
-    service: minio-edge2
+    app: minio-fog2
+    service: minio-fog2
 spec:
   ports:
   - name: http
@@ -14,4 +14,4 @@ spec:
     port: 9000
     targetPort: 9000
   selector:
-    clustername: edge2
+    clustername: fog2

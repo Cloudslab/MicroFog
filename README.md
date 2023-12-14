@@ -52,6 +52,7 @@
    3. [docs](https://github.com/Cloudslab/MicroFog/tree/main/Workload_Generator/docs) : Explains the design, architecture of the workload generator.
    
 ## References :
- * Samodha Pallewatta, Vassilis Kostakos, and Rajkumar Buyya, [”MicroFog: AFramework for Scalable Placement of Microservices-based IoT Applications in Federated Fog Environments”](https://arxiv.org/abs/2302.06971)
+* Samodha Pallewatta, Vassilis Kostakos, Rajkumar Buyya, [MicroFog: A framework for scalable placement of microservices-based IoT applications in federated Fog environments](https://www.sciencedirect.com/science/article/pii/S0164121223003059), Journal of Systems and Software, Volume 209, 2024, 111910, ISSN 0164-1212, [https://doi.org/10.1016/j.jss.2023.111910](https://www.sciencedirect.com/science/article/pii/S0164121223003059)
+
 
 
